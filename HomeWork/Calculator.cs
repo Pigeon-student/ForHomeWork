@@ -11,25 +11,35 @@ class Calculator
         Console.OutputEncoding = System.Text.Encoding.Unicode; // - для коректного відображення українських символів в консолі
 
         Console.Write("Введіть перше число: ");
-        int firstNumber = int.Parse(Console.ReadLine());
+        int firstNumber = int.Parse(Console.ReadLine()); //- як задано в умові завдання
+        //string input = Console.ReadLine();
+        //int firstNumber;
+        //int.TryParse(input, out firstNumber); // - перетворення введеного значення в int
+
 
         Console.Write("Введіть друге число: ");
-        int secondNumber = int.Parse(Console.ReadLine());
+        int secondNumber = int.Parse(Console.ReadLine()); // - як задано в умові завдання
+        //int secondNumber;
+        //input = Console.ReadLine();
+        //int.TryParse(input, out secondNumber); // - перетворення введеного значення в int
 
         Console.Write("Введіть дію між ними: ");
         char action = char.Parse(Console.ReadLine());
-                
+
         switch (action)
         {
             case '+':
                 Console.WriteLine($"Результат : {firstNumber + secondNumber}");
                 break;
+
             case '-':
                 Console.WriteLine($"Результат : {firstNumber - secondNumber}");
                 break;
+
             case '*':
                 Console.WriteLine($"Результат : {firstNumber * secondNumber}");
                 break;
+
             case '/':
 
                 //double result = (double)firstNumber / secondNumber; - якщо треба вивести результат дробовим числом (не задано в умові завдання)
@@ -38,9 +48,9 @@ class Calculator
 
                 //Console.WriteLine($"Результат : {result}"); - вивід результату
 
-
                 Console.WriteLine($"Результат : {firstNumber / secondNumber}"); // -вивід результату цілим числом (задано в умові завдання)
                 break;
+
             default:
                 Console.WriteLine("Якесь ненормальне значення");
                 break;
