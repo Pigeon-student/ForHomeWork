@@ -5,7 +5,7 @@
 
 using System;
 
-class Program
+class WeakDay
 {
     static void Main()
     {
