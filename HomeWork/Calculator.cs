@@ -1,48 +1,48 @@
-/* 
-Користувач вводить два цiлих числа та математичну дію: + - * або /
-Залежно від введеної математичної дії виводиться результат в консоль.
-Використовується конструкція SWITCH
+/*  (РЇРє СЏ С‰РѕР№РЅРѕ РґС–Р·РЅР°РІСЃСЏ GitHub РЅРµ РїС–РґС‚СЂРёРјСѓС” СѓРєСЂР°С—РЅСЃСЊРєСѓ РјРѕРІСѓ, С‚Рѕ РґР»СЏ РєРѕСЂСЂРµРєС‚РЅРѕРіРѕ РІС–РґРѕР±СЂР°Р¶РµРЅРЅСЏ С‚СЂРµР±Р° РєР»РѕРЅСѓРІР°С‚Рё СЂРµРїРѕР·РёС‚РѕСЂС–Р№ РЅР° СЃРІС–Р№ РєРѕРјРї'СЋС‚РµСЂ)
+ГЉГ®Г°ГЁГ±ГІГіГўГ Г· ГўГўГ®Г¤ГЁГІГј Г¤ГўГ  Г¶iГ«ГЁГµ Г·ГЁГ±Г«Г  ГІГ  Г¬Г ГІГҐГ¬Г ГІГЁГ·Г­Гі Г¤ВіГѕ: + - * Г ГЎГ® /
+Г‡Г Г«ГҐГ¦Г­Г® ГўВіГ¤ ГўГўГҐГ¤ГҐГ­Г®Вї Г¬Г ГІГҐГ¬Г ГІГЁГ·Г­Г®Вї Г¤ВіВї ГўГЁГўГ®Г¤ГЁГІГјГ±Гї Г°ГҐГ§ГіГ«ГјГІГ ГІ Гў ГЄГ®Г­Г±Г®Г«Гј.
+Г‚ГЁГЄГ®Г°ГЁГ±ГІГ®ГўГіВєГІГјГ±Гї ГЄГ®Г­Г±ГІГ°ГіГЄГ¶ВіГї SWITCH
 */
 
 class Calculator
 {
-    static void Main() // - точка входу в програму, початок її виконання
+    static void Main() // - ГІГ®Г·ГЄГ  ГўГµГ®Г¤Гі Гў ГЇГ°Г®ГЈГ°Г Г¬Гі, ГЇГ®Г·Г ГІГ®ГЄ ВїВї ГўГЁГЄГ®Г­Г Г­Г­Гї
     {
-        Console.OutputEncoding = System.Text.Encoding.Unicode; // - для коректного відображення українських символів в консолі
+        Console.OutputEncoding = System.Text.Encoding.Unicode; // - Г¤Г«Гї ГЄГ®Г°ГҐГЄГІГ­Г®ГЈГ® ГўВіГ¤Г®ГЎГ°Г Г¦ГҐГ­Г­Гї ГіГЄГ°Г ВїГ­Г±ГјГЄГЁГµ Г±ГЁГ¬ГўГ®Г«ВіГў Гў ГЄГ®Г­Г±Г®Г«Ві
 
-        Console.Write("Введіть перше число: ");
+        Console.Write("Г‚ГўГҐГ¤ВіГІГј ГЇГҐГ°ГёГҐ Г·ГЁГ±Г«Г®: ");
         int firstNumber = int.Parse(Console.ReadLine());
 
-        Console.Write("Введіть друге число: ");
+        Console.Write("Г‚ГўГҐГ¤ВіГІГј Г¤Г°ГіГЈГҐ Г·ГЁГ±Г«Г®: ");
         int secondNumber = int.Parse(Console.ReadLine());
 
-        Console.Write("Введіть дію між ними: ");
+        Console.Write("Г‚ГўГҐГ¤ВіГІГј Г¤ВіГѕ Г¬ВіГ¦ Г­ГЁГ¬ГЁ: ");
         char action = char.Parse(Console.ReadLine());
                 
         switch (action)
         {
             case '+':
-                Console.WriteLine($"Результат : {firstNumber + secondNumber}");
+                Console.WriteLine($"ГђГҐГ§ГіГ«ГјГІГ ГІ : {firstNumber + secondNumber}");
                 break;
             case '-':
-                Console.WriteLine($"Результат : {firstNumber - secondNumber}");
+                Console.WriteLine($"ГђГҐГ§ГіГ«ГјГІГ ГІ : {firstNumber - secondNumber}");
                 break;
             case '*':
-                Console.WriteLine($"Результат : {firstNumber * secondNumber}");
+                Console.WriteLine($"ГђГҐГ§ГіГ«ГјГІГ ГІ : {firstNumber * secondNumber}");
                 break;
             case '/':
 
-                //double result = (double)firstNumber / secondNumber; - якщо треба вивести результат дробовим числом (не задано в умові завдання)
+                //double result = (double)firstNumber / secondNumber; - ГїГЄГ№Г® ГІГ°ГҐГЎГ  ГўГЁГўГҐГ±ГІГЁ Г°ГҐГ§ГіГ«ГјГІГ ГІ Г¤Г°Г®ГЎГ®ГўГЁГ¬ Г·ГЁГ±Г«Г®Г¬ (Г­ГҐ Г§Г Г¤Г Г­Г® Гў ГіГ¬Г®ГўВі Г§Г ГўГ¤Г Г­Г­Гї)
 
-                //double result = Math.Round(((double)firstNumber / secondNumber), 2); - якщо треба вивести результат дробовим числом з округленням до 2х знаків після коми (не задано в умові завдання)
+                //double result = Math.Round(((double)firstNumber / secondNumber), 2); - ГїГЄГ№Г® ГІГ°ГҐГЎГ  ГўГЁГўГҐГ±ГІГЁ Г°ГҐГ§ГіГ«ГјГІГ ГІ Г¤Г°Г®ГЎГ®ГўГЁГ¬ Г·ГЁГ±Г«Г®Г¬ Г§ Г®ГЄГ°ГіГЈГ«ГҐГ­Г­ГїГ¬ Г¤Г® 2Гµ Г§Г­Г ГЄВіГў ГЇВіГ±Г«Гї ГЄГ®Г¬ГЁ (Г­ГҐ Г§Г Г¤Г Г­Г® Гў ГіГ¬Г®ГўВі Г§Г ГўГ¤Г Г­Г­Гї)
 
-                //Console.WriteLine($"Результат : {result}"); - вивід результату
+                //Console.WriteLine($"ГђГҐГ§ГіГ«ГјГІГ ГІ : {result}"); - ГўГЁГўВіГ¤ Г°ГҐГ§ГіГ«ГјГІГ ГІГі
 
 
-                Console.WriteLine($"Результат : {firstNumber / secondNumber}"); // -вивід результату цілим числом (задано в умові завдання)
+                Console.WriteLine($"ГђГҐГ§ГіГ«ГјГІГ ГІ : {firstNumber / secondNumber}"); // -ГўГЁГўВіГ¤ Г°ГҐГ§ГіГ«ГјГІГ ГІГі Г¶ВіГ«ГЁГ¬ Г·ГЁГ±Г«Г®Г¬ (Г§Г Г¤Г Г­Г® Гў ГіГ¬Г®ГўВі Г§Г ГўГ¤Г Г­Г­Гї)
                 break;
             default:
-                Console.WriteLine("Якесь ненормальне значення");
+                Console.WriteLine("ГџГЄГҐГ±Гј Г­ГҐГ­Г®Г°Г¬Г Г«ГјГ­ГҐ Г§Г­Г Г·ГҐГ­Г­Гї");
                 break;
 
         }
