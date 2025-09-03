@@ -2,17 +2,15 @@
 // Необхідно вивести на екран назву дня тижня.
 // Наприклад, якщо "1", на екрані напис "Понеділок", "2" — "Вівторок", тощо.
 
-
-using System;
-
 class WeakDay
 {
-    static void Main()
+    static void Second() // - точка входу в програму, початок її виконання знаходиться в файлі Calculator.cs, змінити на Main() щоб запустити цю програму ( а в файлі Calculator зміни на іншу)
     {
+        Console.OutputEncoding = System.Text.Encoding.Unicode; // - для коректного відображення українських символів в консолі
 
         Console.Write("Введіть номер дня тижня: ");
-        int dayNumber = int.Parse(Console.ReadLine());
-
+        byte dayNumber = byte.Parse(Console.ReadLine());
+        
         string dayName;
 
         switch (dayNumber)
@@ -43,6 +41,6 @@ class WeakDay
                 break;
 
         }
-        Console.Write($"Ви вибрали - {dayName}");
+        Console.Write($"Ви вибрали - {dayName}\n");
     }
 }
