@@ -1,48 +1,48 @@
-/* 
-Користувач вводить два цiлих числа та математичну дію: + - * або /
-Залежно від введеної математичної дії виводиться результат в консоль.
-Використовується конструкція SWITCH
+п»ї/* 
+РљРѕСЂРёСЃС‚СѓРІР°С‡ РІРІРѕРґРёС‚СЊ РґРІР° С†iР»РёС… С‡РёСЃР»Р° С‚Р° РјР°С‚РµРјР°С‚РёС‡РЅСѓ РґС–СЋ: + - * Р°Р±Рѕ /
+Р—Р°Р»РµР¶РЅРѕ РІС–Рґ РІРІРµРґРµРЅРѕС— РјР°С‚РµРјР°С‚РёС‡РЅРѕС— РґС–С— РІРёРІРѕРґРёС‚СЊСЃСЏ СЂРµР·СѓР»СЊС‚Р°С‚ РІ РєРѕРЅСЃРѕР»СЊ.
+Р’РёРєРѕСЂРёСЃС‚РѕРІСѓС”С‚СЊСЃСЏ РєРѕРЅСЃС‚СЂСѓРєС†С–СЏ SWITCH
 */
 
 class Calculator
 {
-    static void Main() // - точка входу в програму, початок її виконання
+    static void Main() // - С‚РѕС‡РєР° РІС…РѕРґСѓ РІ РїСЂРѕРіСЂР°РјСѓ, РїРѕС‡Р°С‚РѕРє С—С— РІРёРєРѕРЅР°РЅРЅСЏ
     {
-        Console.OutputEncoding = System.Text.Encoding.Unicode; // - для коректного відображення українських символів в консолі
+        Console.OutputEncoding = System.Text.Encoding.Unicode; // - РґР»СЏ РєРѕСЂРµРєС‚РЅРѕРіРѕ РІС–РґРѕР±СЂР°Р¶РµРЅРЅСЏ СѓРєСЂР°С—РЅСЃСЊРєРёС… СЃРёРјРІРѕР»С–РІ РІ РєРѕРЅСЃРѕР»С–
 
-        Console.Write("Введіть перше число: ");
+        Console.Write("Р’РІРµРґС–С‚СЊ РїРµСЂС€Рµ С‡РёСЃР»Рѕ: ");
         int firstNumber = int.Parse(Console.ReadLine());
 
-        Console.Write("Введіть друге число: ");
+        Console.Write("Р’РІРµРґС–С‚СЊ РґСЂСѓРіРµ С‡РёСЃР»Рѕ: ");
         int secondNumber = int.Parse(Console.ReadLine());
 
-        Console.Write("Введіть дію між ними: ");
+        Console.Write("Р’РІРµРґС–С‚СЊ РґС–СЋ РјС–Р¶ РЅРёРјРё: ");
         char action = char.Parse(Console.ReadLine());
                 
         switch (action)
         {
             case '+':
-                Console.WriteLine($"Результат : {firstNumber + secondNumber}");
+                Console.WriteLine($"Р РµР·СѓР»СЊС‚Р°С‚ : {firstNumber + secondNumber}");
                 break;
             case '-':
-                Console.WriteLine($"Результат : {firstNumber - secondNumber}");
+                Console.WriteLine($"Р РµР·СѓР»СЊС‚Р°С‚ : {firstNumber - secondNumber}");
                 break;
             case '*':
-                Console.WriteLine($"Результат : {firstNumber * secondNumber}");
+                Console.WriteLine($"Р РµР·СѓР»СЊС‚Р°С‚ : {firstNumber * secondNumber}");
                 break;
             case '/':
 
-                //double result = (double)firstNumber / secondNumber; - якщо треба вивести результат дробовим числом (не задано в умові завдання)
+                //double result = (double)firstNumber / secondNumber; - СЏРєС‰Рѕ С‚СЂРµР±Р° РІРёРІРµСЃС‚Рё СЂРµР·СѓР»СЊС‚Р°С‚ РґСЂРѕР±РѕРІРёРј С‡РёСЃР»РѕРј (РЅРµ Р·Р°РґР°РЅРѕ РІ СѓРјРѕРІС– Р·Р°РІРґР°РЅРЅСЏ)
 
-                //double result = Math.Round(((double)firstNumber / secondNumber), 2); - якщо треба вивести результат дробовим числом з округленням до 2х знаків після коми (не задано в умові завдання)
+                //double result = Math.Round(((double)firstNumber / secondNumber), 2); - СЏРєС‰Рѕ С‚СЂРµР±Р° РІРёРІРµСЃС‚Рё СЂРµР·СѓР»СЊС‚Р°С‚ РґСЂРѕР±РѕРІРёРј С‡РёСЃР»РѕРј Р· РѕРєСЂСѓРіР»РµРЅРЅСЏРј РґРѕ 2С… Р·РЅР°РєС–РІ РїС–СЃР»СЏ РєРѕРјРё (РЅРµ Р·Р°РґР°РЅРѕ РІ СѓРјРѕРІС– Р·Р°РІРґР°РЅРЅСЏ)
 
-                //Console.WriteLine($"Результат : {result}"); - вивід результату
+                //Console.WriteLine($"Р РµР·СѓР»СЊС‚Р°С‚ : {result}"); - РІРёРІС–Рґ СЂРµР·СѓР»СЊС‚Р°С‚Сѓ
 
 
-                Console.WriteLine($"Результат : {firstNumber / secondNumber}"); // -вивід результату цілим числом (задано в умові завдання)
+                Console.WriteLine($"Р РµР·СѓР»СЊС‚Р°С‚ : {firstNumber / secondNumber}"); // -РІРёРІС–Рґ СЂРµР·СѓР»СЊС‚Р°С‚Сѓ С†С–Р»РёРј С‡РёСЃР»РѕРј (Р·Р°РґР°РЅРѕ РІ СѓРјРѕРІС– Р·Р°РІРґР°РЅРЅСЏ)
                 break;
             default:
-                Console.WriteLine("Якесь ненормальне значення");
+                Console.WriteLine("РЇРєРµСЃСЊ РЅРµРЅРѕСЂРјР°Р»СЊРЅРµ Р·РЅР°С‡РµРЅРЅСЏ");
                 break;
 
         }
